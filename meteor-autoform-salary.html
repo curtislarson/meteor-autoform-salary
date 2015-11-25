@@ -1,0 +1,12 @@
+<template name="afSalaryInput">
+  <div class="input-group">
+    <span class="input-group-btn">
+      <select id="currencySelect" class="btn btn-default currency-select">
+        {{#each this.atts.currencies}}
+          <option value="{{value}}">{{label}}</option>
+        {{/each}}
+      </select>
+    </span>
+    <input type="number" class="form-control" {{atts}}>
+  </div>
+</template>

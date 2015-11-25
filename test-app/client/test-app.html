@@ -1,0 +1,11 @@
+<body>
+  <div class="container">
+    <div class="row">
+      {{#autoForm schema=testSchema id="testSchema"}}
+        <div class="col-md-4">
+          {{> afQuickField name="salary" currencies=currencies}}
+        </div>
+      {{/autoForm}}
+    </div>
+  </div>
+</body>
