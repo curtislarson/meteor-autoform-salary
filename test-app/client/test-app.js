@@ -8,7 +8,8 @@ Template.body.helpers({
       salary: {
         type: Object,
         autoform: {
-          type: "salary-input"
+          type: "salary-input",
+          label: false
         }
       }
     });

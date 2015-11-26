@@ -2,3 +2,19 @@
   border-radius: 0;
   -webkit-appearance: none;
 }
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: -4px;
+}
+
+.input-wrapper > input {
+  padding-left: 20px;
+}
+
+.icon-inside-input {
+  top: 2px;
+  right: 10px;
+  position: absolute;
+  z-index: 100;
+}

@@ -4,9 +4,16 @@
       <select id="currencySelect" class="btn btn-default currency-select">
         {{#each this.atts.currencies}}
           <option value="{{value}}">{{label}}</option>
+        {{else}}
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="AUD">AUD</option>
         {{/each}}
       </select>
     </span>
-    <input type="number" class="form-control" {{atts}}>
+    <label class="input-wrapper">
+      <i class="fa fa-eur icon-inside-input fa-2x"></i>
+      <input type="number" class="form-control" {{atts}}>
+    </label>
   </div>
 </template>
