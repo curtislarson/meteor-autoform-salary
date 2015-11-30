@@ -12,6 +12,12 @@ Template.body.helpers({
           enableIcon: true,
           label: false
         }
+      },
+      "salary.amount": {
+        type: Number
+      },
+      "salary.currency": {
+        type: String
       }
     });
   },
@@ -28,5 +34,15 @@ Template.body.helpers({
         icon: "fa-eur"
       }
     ];
+  }
+});
+
+AutoForm.addHooks("testSchema", {
+  onSubmit: function(insertDoc, updateDoc, currentDoc) {
+    console.log(insertDoc);
+    return false;
+  },
+  onError: function() {
+    console.log("err", arguments);
   }
 });
