@@ -18,6 +18,8 @@ If you wish you use icons in the input field, you must also install the font awe
 
 From the internal test-app program.
 
+### Html code
+
     <body>
       <div class="container">
         <div class="row">
@@ -32,6 +34,8 @@ From the internal test-app program.
         </div>
       </div>
     </body>
+
+### Javascript code
 
 
     Template.body.helpers({
