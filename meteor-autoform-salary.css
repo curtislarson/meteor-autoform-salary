@@ -6,10 +6,17 @@
 .input-wrapper {
   position: relative;
   margin-bottom: -4px;
+  font-weight: normal;
 }
 
 .input-wrapper > input {
   padding-left: 20px;
+}
+
+.input-wrapper > input::-webkit-inner-spin-button,
+.input-wrapper > input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .icon-inside-input {

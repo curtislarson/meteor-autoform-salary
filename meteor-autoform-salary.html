@@ -12,7 +12,9 @@
       </select>
     </span>
     <label class="input-wrapper">
-      <i class="fa fa-eur icon-inside-input fa-2x"></i>
+      {{#if atts.enableIcon}}
+      <i class="fa {{currencyIcon}} icon-inside-input fa-2x"></i>
+      {{/if}}
       <input type="number" class="form-control" {{atts}}>
     </label>
   </div>

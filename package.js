@@ -14,8 +14,9 @@ Package.onUse(function(api) {
   api.versionsFrom("1.2.1");
   api.use("ecmascript");
 
-  api.use(["templating@1.0.0", "blaze@2.0.0"], "client");
+  api.use(["templating@1.0.0", "blaze@2.0.0", "reactive-var"], "client");
   api.use("aldeed:autoform@4.0.0 || 5.0.0");
+
 
   api.addFiles(["meteor-autoform-salary.css",
                 "meteor-autoform-salary.html",

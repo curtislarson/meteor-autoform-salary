@@ -1,3 +1,5 @@
+var SelectedCurrency = new ReactiveVar(null);
+
 AutoForm.addInputType("salary-input", {
   template: "afSalaryInput",
   valueOut: function() {
@@ -10,6 +12,15 @@ AutoForm.addInputType("salary-input", {
 
 Template.afSalaryInput.onRendered(function() {
   console.log(this.data);
+  var currency = $("#currencySelect").val();
+  SelectedCurrency.set(currency);
+});
+
+Template.afSalaryInput.events({
+  "change #currencySelect": function(event) {
+    var currency = $(event.target).val();
+    SelectedCurrency.set(currency);
+  }
 });
 
 Template.afSalaryInput.helpers({
@@ -20,6 +31,18 @@ Template.afSalaryInput.helpers({
     delete atts.currencies;
     return atts;
   },
+  currencyIcon: function() {
+    var selectedCurrency = SelectedCurrency.get();
+    if (selectedCurrency) {
+      var currencies = Template.currentData().atts.currencies;
+      console.log(currencies);
+      for (var i = 0; i < currencies.length; i++) {
+        if (currencies[i].value === selectedCurrency) {
+          return currencies[i].icon;
+        }
+      }
+    }
+  }
 });
 
 Template.afSalaryInput.onDestroyed(function() {

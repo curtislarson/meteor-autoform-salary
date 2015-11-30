@@ -9,6 +9,7 @@ Template.body.helpers({
         type: Object,
         autoform: {
           type: "salary-input",
+          enableIcon: true,
           label: false
         }
       }
@@ -19,10 +20,12 @@ Template.body.helpers({
       {
         label: "USD",
         value: "USD",
+        icon: "fa-usd"
       },
       {
         label: "EUR",
-        value: "EUR"
+        value: "EUR",
+        icon: "fa-eur"
       }
     ];
   }
